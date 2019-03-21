@@ -39,3 +39,60 @@ heroku buildpacks:add heroku/ruby --index 2
 
 If not deploying to heroku:
 From root folder: yarn build && yarn deploy
+
+
+### GraphQL commands
+
+```
+
+
+
+  # Enter your graphQL query here.
+
+# {
+#   authors {
+#     name
+#     id
+#     books {
+#       genre 
+     
+      
+#     }
+#   }
+# }
+
+# mutation createAuthor($name: String!, $age: Int){
+#   createAuthor(name: $name, age: $age) {
+#     author {
+#       id
+#       name
+#       age
+#     }
+#   }
+# }
+
+# mutation updateAuthor($id: ID!, $name: String!, $age: Int){
+#   updateAuthor(id: $id, name: $name, age: $age){
+#     author {
+#       name
+#       age
+#       id
+#     }
+#   }
+# }
+
+# mutation deleteAuthor($id: ID!) {
+#   deleteAuthor(id: $id) {
+#     author {
+#       name
+#       id
+#     }
+#   }
+# }
+
+
+
+
+
+
+```
