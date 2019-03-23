@@ -55,12 +55,21 @@ From root folder: yarn build && yarn deploy
 #     id
 #     books {
 #       genre 
-     
-      
+#       title
 #     }
 #   }
 # }
 
+# {
+#   books{
+#     author {
+#       name
+#     }
+#     id
+#     title
+    
+#   }
+# }
 # mutation createAuthor($name: String!, $age: Int){
 #   createAuthor(name: $name, age: $age) {
 #     author {
@@ -90,9 +99,40 @@ From root folder: yarn build && yarn deploy
 #   }
 # }
 
+# mutation createBook($author_id: ID!, $title: String, $genre: String){
+#   createBook(authorId: $author_id, title: $title, genre: $genre){
+#     book{
+#       id
+#       genre
+#       title
+#       authorId
+#     }
+#   }
+# }
+
+# mutation updateBook($id: ID!, $title: String, $genre: String) {
+#   updateBook(id: $id, title: $title, genre: $genre){
+#     book{
+#       id
+#       authorId
+#       title
+#       genre
+#     }
+#   }
+# }
+
+# mutation deleteBook($id: ID!){
+#   deleteBook(id: $id){
+#     book{
+#       id
+#       authorId
+#       title
+#       genre
+#     }
+#   }
+# }
 
 
 
 
 
-```
