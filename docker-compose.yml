@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  retro:
+    
+    build: .
+    volumes:
+      - ./:/app
+    working_dir: /app
+
+    # command: puma
+    # ports:
+    #   - 3000:3000

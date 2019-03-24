@@ -1,7 +1,24 @@
-### This project is still in progress
+# README
 
-#### TODO
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-1. Understand more about RoR + GraphQL via tutorial
-2. Start on project's backend 
-3. Start on project's frontend (React-Redux + Apollo)
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
