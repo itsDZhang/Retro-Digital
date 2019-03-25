@@ -1,13 +1,27 @@
 version: '3.3'
-
+volumes:
+  postgres-data:
 services:
-  retro:
-    
-    build: .
+  db:
+    image: postgres
     volumes:
-      - ./:/app
-    working_dir: /app
+      - postgres-data:/var/lib/postgresql/data
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/project
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
 
-    # command: puma
-    # ports:
-    #   - 3000:3000
+# The version tells Docker about the possible tokens used inside this YAML file. Be cautious using flags from other versions, they may not work in version 3.2.
+# A standalone database container launched from official Postgres image.
+# Another service named app which is built based on the Dockerfile in the same folder.
+# The final command that needs to be run when launching the container.
+# A volume that maps local folder to the corresponding folder inside the container.
+# Instruction to open port 3000 and map it to port 3000 on the host.
+# An instruction to launch db service first as a dependency before launching app service.

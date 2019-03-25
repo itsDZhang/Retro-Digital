@@ -22,3 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+### Commands:
+To run any command inside the containers:
+```
+docker-compose exec --user $(id -u):$(id -g) app /bin/bash
+```
+
+
+TODO (For later)
+- [ ] Setup foreman to assist with hot reload for docker (since docker allows only one command per service)
