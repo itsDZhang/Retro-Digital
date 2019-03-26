@@ -29,6 +29,10 @@ To run any command inside the containers:
 ```
 docker-compose exec --user $(id -u):$(id -g) app /bin/bash
 ```
+or 
+```
+docker-compose exec <service name (app)> bash
+```
 
 
 TODO (For later)

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 
+  content: 
+  date_created: 
+  votes: 
+
+two:
+  status: 
+  content: 
+  date_created: 
+  votes: 

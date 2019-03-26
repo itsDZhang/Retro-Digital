@@ -5,8 +5,8 @@ RUN apt-get update -qq && \
     gem install bundler
 
 RUN mkdir /project
+# Look at the files you're copying and compare its hashes
 COPY Gemfile  Gemfile.lock /project/
-
 WORKDIR /project
 RUN bundle install
 COPY . /project

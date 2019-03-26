@@ -12,7 +12,9 @@ services:
       dockerfile: Dockerfile
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
-      - .:/project
+      # Below is how the project communicates between
+      # the local and the docker compose container
+      - .:/project #sets the current directionary 
     ports:
       - "3000:3000"
     depends_on:

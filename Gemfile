@@ -17,6 +17,10 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 # graphql
 gem 'graphql', '~> 1.8', '>= 1.8.5'
+group :development, :test do
+  gem 'pry' # debugging
+  gem 'faker' # seed data
+end
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
