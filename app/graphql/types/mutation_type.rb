@@ -1,6 +1,10 @@
 module Types
   class MutationType < Types::BaseObject
-    # TODO: remove me
     field :create_user, mutation: Mutations::CreateUser
+    field :update_user, mutation: Mutations::UpdateUser
+    field :delete_user, mutation: Mutations::DeleteUser
+
+    field :create_comment, mutation: Mutations::CreateComment
+    
   end
 end
