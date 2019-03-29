@@ -32,6 +32,8 @@ query{
 }
 ```
 
+For more GraphQL queries, go [here](https://github.com/itsDZhang/Retro-Digital/blob/master/GraphqlCmds.md)
+
 
 ### Commands:
 To run any command inside the containers:

@@ -1,5 +1,5 @@
 ### Graphql queries and mutations (tested)
-
+```
 {
   users{
     name
@@ -73,3 +73,5 @@ mutation createComment($user_id: ID!, $status: String, $votes: Int, $content: St
     }
   }
 }
+
+```
