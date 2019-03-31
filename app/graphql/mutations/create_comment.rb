@@ -5,7 +5,6 @@ class Mutations::CreateComment < Mutations::BaseMutation
   argument :status, String, required: false
   argument :content, String, required: false
   argument :date_created, String, required: false
-  argument :created_at, String, required: false
   argument :votes, Integer, required: false
 
   field :comment, CommentType, null: true
@@ -16,7 +15,6 @@ class Mutations::CreateComment < Mutations::BaseMutation
     status:, 
     content:, 
     date_created:,
-    created_at:,
     votes:)
     
     new_comment = Comment.new(
@@ -24,7 +22,6 @@ class Mutations::CreateComment < Mutations::BaseMutation
       status: status,
       content: content,
       date_created: date_created,
-      created_at: created_at,
       votes: votes
     )
     if new_comment.save
